@@ -1,23 +1,29 @@
-import { icon } from "@/icons/icon";
+import { useEffect, useState } from "react";
+import { getData } from "@/utils/assignData";
 
-const Card = ({ title, src, result }) => (
+const Card = ({ category, score, icon }) => (
   <div>
     <div>
-      <img src={src} alt={title} />
-      <span>{title}</span>
+      <img src={icon} alt={category} />
+      <span>{category}</span>
     </div>
     <div>
-      {result}
+      {score}
       <span>/100</span>
     </div>
   </div>
 );
 
 const Summary = () => {
+  const [result, setResult] = useState([]);
+
+  useEffect(() => {
+    getData(setResult);
+  }, []);
   return (
     <div>
-      {icon.map(({ id, title, src, result }) => (
-        <Card title={title} src={src} result={result} key={id} />
+      {result.map(({ id, category, score, icon }) => (
+        <Card category={category} score={score} icon={icon} key={id} />
       ))}
     </div>
   );
