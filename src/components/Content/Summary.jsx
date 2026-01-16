@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getData } from "@/utils/assignData";
+import { getData } from "@/utils/getData";
 import Button from "@/components/Content/Button.jsx";
 
 const Card = ({ category, score, icon, style }) => (
