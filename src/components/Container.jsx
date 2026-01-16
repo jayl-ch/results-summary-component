@@ -1,13 +1,11 @@
 import Result from "./Content/Result";
 import Summary from "./Content/Summary";
-import Button from "./Content/Button";
 
 const Container = () => {
   return (
-    <article className="bg-[var(--neutral-white)]">
+    <article className="bg-[var(--neutral-white)] h-[100vh] max-w-[45rem] md:h-auto md:flex md:rounded-4xl overflow-hidden">
       <Result />
       <Summary />
-      <Button />
     </article>
   );
 };

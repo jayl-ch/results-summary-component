@@ -11,6 +11,11 @@
   --primary-green-teal: hsl(166, 100%, 37%);
   --primary-cobalt-blue: hsl(234, 85%, 45%);
 
+  --primary-light-red-bg: hsla(0, 100%, 67%, 0.1);
+  --primary-orange-yellow-bg: hsla(39, 100%, 56%, 0.1);
+  --primary-green-teal-bg: hsla(166, 100%, 37%, 0.1);
+  --primary-cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
+
   --bg-light-slate-blue: hsl(252, 100%, 67%);
   --bg-light-royal-blue: hsl(241, 81%, 54%);
 
@@ -21,6 +26,12 @@
     to bottom,
     var(--bg-light-slate-blue),
     var(--bg-light-royal-blue)
+  );
+
+  --gradient-circle: linear-gradient(
+    to bottom,
+    var(--circle-violet-blue),
+    var(--circle-blue)
   );
 
   --neutral-white: hsl(0, 0%, 100%);
